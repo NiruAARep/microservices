@@ -28,11 +28,9 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const productIds = req.body.productIds;
   if (!Array.isArray(productIds) || productIds.length === 0) {
-    return res
-      .status(400)
-      .json({
-        message: "Les IDs de produits sont requis et doivent être un tableau.",
-      });
+    return res.status(400).json({
+      message: "Les IDs de produits sont requis et doivent être un tableau.",
+    });
   }
   const orders = readOrders();
   const newOrder = {
