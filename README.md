@@ -2,6 +2,7 @@ Ce projet regroupe plusieurs microservices développés dans différents langage
 
 📁 Structure du projet
 
+```
 micro-services/
 ├── docker-compose.yml              # Orchestre Docker
 │
@@ -21,25 +22,24 @@ micro-services/
 │   ├── Dockerfile
 │   ├── routes/
 │   │   └── orders.js
-│   └── index.js 
+│   └── index.js
 │
 └── utilisateur/                    # Microservice Utilisateur (Go)
     ├── Dockerfile
     └── main.go
 
-
+```
 
 🔧 Services actuels
 
-| Microservice | Port   | Langage   | Description                                    |
-|--------------|--------|-----------|------------------------------------------------|
-| Catalogue    | 8081   | Node.js   | Gère une liste de produits disponibles.        |
-| Commande     | 8082   | Node.js   | Gère la liste des commandes effectuées.        |
-| Utilisateur  | 8083   | Go        | Gère les utilisateurs (exemple simplifié).     |
-| API Gateway  | 3000   | Node.js   | Sert de point d’entrée pour tous les services. |
+| Microservice | Port | Langage | Description                                    |
+| ------------ | ---- | ------- | ---------------------------------------------- |
+| Catalogue    | 8081 | Node.js | Gère une liste de produits disponibles.        |
+| Commande     | 8082 | Node.js | Gère la liste des commandes effectuées.        |
+| Utilisateur  | 8083 | Go      | Gère les utilisateurs (exemple simplifié).     |
+| API Gateway  | 3000 | Node.js | Sert de point d’entrée pour tous les services. |
 
 ---
-
 
 ▶️ Lancer tous les services
 Assurez-vous d’être à la racine du projet (micro-services/), puis exécute :
@@ -47,19 +47,18 @@ Assurez-vous d’être à la racine du projet (micro-services/), puis exécute :
 bash
 `docker compose up --build`
 
-
-Les services seront accessibles, et testable sur Postman ou Insomnia : 
+Les services seront accessibles, et testable sur Postman ou Insomnia :
 
 GET http://localhost:8081/products
 GET http://localhost:8081/products/2
 
 POST http://localhost:8081/products
 
-avec le contenu JSON : 
+avec le contenu JSON :
 
 {
-  "name": "Chemise",
-  "price": 9.99
+"name": "Chemise",
+"price": 9.99
 }
 
 GET http://localhost:8082/orders
