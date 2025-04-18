@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "products": [
+      {
+        "id": 2,
+        "name": "Stylo bleu",
+        "price": 1.5
+      },
+      {
+        "id": 5,
+        "name": "Cahier A4",
+        "price": 3
+      }
+    ],
+    "createdAt": "2025-04-18T12:25:37.000Z"
+  }
+]
