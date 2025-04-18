@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  catalogue:
+    build: .
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+      - /app/node_modules

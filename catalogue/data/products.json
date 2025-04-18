@@ -1,0 +1,12 @@
+[
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "price": 299.99
+    },
+    {
+      "id": 2,
+      "name": "Casque Bluetooth",
+      "price": 79.99
+    }
+  ]
