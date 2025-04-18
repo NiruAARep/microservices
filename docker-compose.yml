@@ -1,4 +1,15 @@
 services:
+
+  gateway:
+      build:
+        context: ./gateway
+      ports:
+        - "3000:3000"
+      depends_on:
+        - catalogue
+        - commande
+        - utilisateur
+
   catalogue:
     build:
       context: ./catalogue
@@ -12,9 +23,6 @@ services:
       context: ./commande
     ports:
       - "8082:8082"
-    volumes:
-      - .:/app
-      - /app/node_modules
 
   utilisateur:
     build:
